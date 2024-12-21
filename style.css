@@ -48,17 +48,6 @@ header h2 {
     text-wrap: nowrap;  
 }
 
-@media (max-width: 675px) {
-    .container {
-        padding: 2rem;
-    }
-
-    header h2 {
-        font-size: 0.8rem;
-        letter-spacing: 0.3rem;
-    }
-}
-
 /* Main Content */
 main {
     display: flex;
@@ -88,12 +77,6 @@ main p {
     gap: 2rem;
 }
 
-@media (max-width: 770px) {
-    .introduction {
-        flex-direction: column;
-    }
-}
-
 /* Photo */
 .introduction img {
     height: auto;
@@ -111,17 +94,6 @@ main p {
     max-width: 600px;    
 }
 
-@media (max-width: 535px) {
-    .introduction h1 {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-    }   
-
-    .introduction img {
-        width: 12rem;
-    }
-}
-
 .introduction h1 span {
     font-weight: 900;
     text-wrap: nowrap;
@@ -132,24 +104,6 @@ main p {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 6rem;
-}
-
-@media (max-width: 770px) {
-    .am-cl-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .about-me {
-        text-align: center;
-    }
-
-    .currently-learning {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 /* Currently Learning */
@@ -310,21 +264,6 @@ main p {
     font-size: 2rem;
 }
 
-@media (max-width: 610px) {
-    .contact-grid {
-        display: flex;
-        flex-direction: column;
-        position: static;
-        gap: 4rem;
-    }
-
-    .social-media {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
 /* Contact Form*/
 form {
     display: flex;
@@ -385,13 +324,20 @@ form {
 
 .error-message {
     position: absolute;
-    right: -11rem;
+    right: -12.5rem;
     top: 50%;
     transform: translateY(-50%);
     color: rgb(167, 52, 52);
     font-weight: 700;
     display: none;
     transition: all 0.15s ease;
+    background-color: rgb(255, 240, 240);
+    padding: 0.72rem 1rem;
+    border-radius: 3px;
+}
+
+.error-message__responsive {
+    display: none;
 }
 
 .form-email:invalid:not(:focus):not(:placeholder-shown) {
@@ -434,3 +380,94 @@ footer p {
     text-align: center;
     padding-top: 4rem;  
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 535px) {
+    .introduction h1 {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }   
+
+    .introduction img {
+        width: 12rem;
+    }
+}
+
+@media (max-width: 610px) {
+    .contact-grid {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        gap: 4rem;
+    }
+
+    .social-media {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .form-email:invalid:not(:focus):not(:placeholder-shown) ~ .error-message {
+        display: none;
+    }
+
+    .form-email:invalid:not(:focus):not(:placeholder-shown) ~ .error-message__responsive {
+        display: block;
+        text-align: start;
+        color: rgb(167, 52, 52);
+        font-weight: 700;
+        transition: all 0.15s ease;
+        background-color: rgb(255, 240, 240);
+        padding: 0.5rem 1rem;
+        border-radius: 3px;
+        margin: 1rem 0 0.1rem;
+    }
+}
+
+@media (max-width: 675px) {
+    .container {
+        padding: 2rem;
+    }
+
+    header h2 {
+        font-size: 0.8rem;
+        letter-spacing: 0.3rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .introduction {
+        flex-direction: column;
+    }
+
+    .am-cl-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-me {
+        text-align: center;
+    }
+
+    .currently-learning {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1075px) {
+    .form-email:invalid:not(:focus):not(:placeholder-shown) ~ .error-message {
+        position: relative; 
+        left: 0;
+        text-align: start;
+        padding-left: 1rem;
+        margin-top: -1rem;
+        background-color: rgb(255, 240, 240);
+        padding: 0.5rem 1rem;
+        border-radius: 3px;
+    }
+}
+
+
