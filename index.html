@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Personal Website</h2>
+      </header>
+
+      <main>
+        <section class="introduction">
+          <img src="images/photo.jpg" alt="Placeholder photo" />
+          <h1>
+            Hey! I'm <span>Ennio</span>, a twenty-nine year old aspiring
+            <span>Frontend Developer</span> based in
+            <span>The Netherlands</span>.
+          </h1>
+        </section>
+
+        <section class="am-cl-grid">
+          <article class="about-me">
+            <h2>About Me</h2>
+            <p>
+              In October of 2024 I started learning to code after always being
+              interested in it since college. I love tech in general and
+              building websites looked a lot of fun to me. My journey started
+              with frontend development but the goal is to eventually be a
+              fullstack developer! The idea of this website is to track and
+              display my process in learning different coding languages.
+              <br />
+              <br />
+              Besides coding, I have a wide variaty of interests, but I love to
+              watch and play football, videogames, movies and TV series. I've
+              played football since 6 years old and currently play in an amateur
+              sunday league team. When it comes to videogames I have enjoy
+              plenty of different games, however MMORPG's have always been one
+              of my favourites. I currently play <i>Guild Wars 2 </i>and
+              <i>World of Warcraft Classic</i>. My favorite genres are thrillers
+              and documentaries, with notable examples such as <i>Zodiac</i>,
+              <i>Memories of Murder</i> and <i>True Detective</i>.
+            </p>
+          </article>
+
+          <div class="currently-learning">
+            <h2>Currently Learning</h2>
+
+            <div class="cl-language">
+              <div class="language-container">
+                <i
+                  class="fa-brands fa-html5"
+                  style="color: rgb(230, 81, 39)"
+                ></i>
+                <h3>HTML</h3>
+              </div>
+
+              <div class="language-container">
+                <i
+                  class="fa-brands fa-css3-alt"
+                  style="color: rgb(12, 115, 184)"
+                ></i>
+                <h3>CSS</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects">
+          <h2>Projects</h2>
+          <p>
+            Small projects I've made since I started coding. Mainly challenges
+            from
+            <a href="https://frontendmentor.io" target="_blank"
+              >Frontend Mentor</a
+            >
+            and <a href="https://icodethis.com" target="_blank">iCodeThis</a>.
+          </p>
+          <div class="projects-grid">
+            <div class="project-layout">
+              <a
+                class="thumbnail-container"
+                href="https://ehesseboom.github.io/NFT-preview-card-component-challenge-solution/"
+                target="_blank"
+                ><img src="images/project1.png" alt="thumbnail first project" />
+              </a>
+              <h3>NFT Display</h3>
+              <p>A display of an NFT created with flexboxes.</p>
+            </div>
+            <div class="project-layout">
+              <a
+                class="thumbnail-container"
+                href="https://ehesseboom.github.io/Single-price-grid-component/"
+                target="_blank"
+              >
+                <img src="images/project2.png" alt="thumbnail second project" />
+              </a>
+
+              <h3>Pricing Component</h3>
+              <p>
+                A responsive, single grid, pricing component with a
+                call-to-action.
+              </p>
+            </div>
+            <div class="project-layout">
+              <a
+                class="thumbnail-container"
+                href="https://ehesseboom.github.io/Huddle-landing-page-with-a-single-introductory-section/"
+                target="_blank"
+                ><img src="images/project3.png" alt="thumbnail third project"
+              /></a>
+
+              <h3>Huddle Landing Page</h3>
+              <p>
+                A responsive landing page for Huddle with a two column layout.
+              </p>
+            </div>
+            <div class="project-layout">
+              <a
+                class="thumbnail-container"
+                href="https://ehesseboom.github.io/vintage-newspaper-website/"
+                target="_blank"
+                ><img src="images/project4.png" alt="thumbnail fourth project"
+              /></a>
+
+              <h3>Vintage Newspaper</h3>
+              <p>
+                A vintage newspaper frontpage responsive for different sizes
+                devices.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact">
+          <h2>Contact</h2>
+          <p>
+            Feel free to reach out through email or get in touch via any of my
+            social media!
+          </p>
+
+          <div class="contact-grid">
+            <form>
+              <div class="form-fullname">
+                <input
+                  type="text"
+                  class="form-name"
+                  placeholder="First Name"
+                  required
+                />
+                <input
+                  type="text"
+                  class="form-name"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+              <div class="form-email__container">
+                <input
+                  type="email"
+                  class="form-email"
+                  placeholder="Email Address"
+                  required
+                />
+                <i
+                  class="fa-solid fa-check"
+                  style="color: rgb(94, 211, 94)"
+                ></i>
+                <p class="error-message">Invalid Email Address</p>
+              </div>
+
+              <textarea
+                class="form-textbox"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button class="btn-form" type="submit">Send</button>
+            </form>
+            <div class="social-media">
+              <a href="https://www.youtube.com/" target="_blank"
+                ><i class="fa-brands fa-youtube" style="color: #fe080a"></i
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+              ></a>
+              <a href="https://x.com/" target="_blank"
+                ><i class="fa-brands fa-x-twitter" style="color: #171b20"></i
+              ></a>
+              <a href="https://github.com/ehesseboom" target="_blank"
+                ><i class="fa-brands fa-github" style="color: #ffba08"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Made by Ennio Esseboom &copy; 2024</p>
+      </footer>
+    </div>
+  </body>
+</html>
