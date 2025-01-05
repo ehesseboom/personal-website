@@ -165,8 +165,9 @@ main p {
 /* Layout of a single project */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+    justify-content: center;
 }
 
 .project-layout {
@@ -181,7 +182,7 @@ main p {
 
 .thumbnail-container {
     position: relative;
-    height: 8rem;
+    height: 12rem;
     width: 100%;
     border-radius: 3px;
     overflow: hidden;
@@ -220,6 +221,7 @@ main p {
 
 .project-layout p {
     font-size: 1rem;
+    margin: 0;
 }
 
 /* Contact */
